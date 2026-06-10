@@ -43,8 +43,9 @@ class Index:
     # -- loading -----------------------------------------------------------
     def _load(self) -> None:
         overlay_stems = self.cfg.overlay_stems()
+        shared_stems = {s for s, _ in self.cfg.shared_groups}
         for stem, path in self.files.items():
-            if self.cfg.is_xgroup_stem(stem):
+            if self.cfg.is_xgroup_stem(stem) or stem in shared_stems:
                 self.xgroups[stem] = xmlutil.parse(path)
             elif stem in overlay_stems:
                 self.overlays[stem] = xmlutil.parse(path)
@@ -63,11 +64,12 @@ class Index:
             code = (xmlutil.child_text(sf, "label") or "").strip()
             if not code:
                 continue
-            self.appendix.setdefault(letter, {})[code] = {
+            # a code may have several entries with different @field scopes
+            self.appendix.setdefault(letter, {}).setdefault(code, []).append({
                 "description": xmlutil.flatten_descriptions(sf),
                 "codes": parsers.parse_value_codes(sf),
                 "scope": parsers.parse_field_scope(sf),
-            }
+            })
 
     def _maybe_load_roster(self, stem: str, path: Path) -> None:
         root = xmlutil.parse(path)
@@ -110,7 +112,12 @@ class Index:
     # -- queries -----------------------------------------------------------
     def xgroup_for_tag(self, tag: str) -> etree._Element | None:
         stem = self.cfg.xgroup_stem_for_tag(tag)
-        return self.xgroups.get(stem) if stem else None
+        if stem and stem in self.xgroups:
+            return self.xgroups[stem]
+        for shared_stem, pred in self.cfg.shared_groups:
+            if pred(tag) and shared_stem in self.xgroups:
+                return self.xgroups[shared_stem]
+        return None
 
     def overlay_for_tag(self, tag: str) -> etree._Element | None:
         for stem, pred in self.cfg.overlays:
@@ -125,10 +132,7 @@ class Index:
         return m.group(2).lower() if m else None
 
     def appendix_entry(self, letter: str, code: str, tag: str):
-        entry = self.appendix.get(letter, {}).get(code)
-        if entry is None:
-            return None
-        scope = entry.get("scope")
-        if scope is not None and tag not in scope:
-            return None
-        return entry
+        for entry in self.appendix.get(letter, {}).get(code, []):
+            if parsers.scope_match(entry.get("scope"), tag):
+                return entry
+        return None

@@ -25,6 +25,10 @@ class FormatConfig:
     dirname: str            # XML subdirectory under MARCDOCS/XML_files/
     # overlay docs: (stem, predicate(tag)) supplying field-specific overrides
     overlays: list[tuple[str, Callable[[str], bool]]] = field(default_factory=list)
+    # shared "General Information" docs that hold the FULL subfield/indicator
+    # definitions for a family whose stem doesn't match the X-group pattern
+    # (e.g. bib linking fields 760-787 -> bd760787); consulted like X-groups
+    shared_groups: list[tuple[str, Callable[[str], bool]]] = field(default_factory=list)
 
     # -- derived helpers ---------------------------------------------------
     def glob(self) -> str:
@@ -73,6 +77,10 @@ def _starts(prefixes: str) -> Callable[[str], bool]:
     return lambda t: bool(t) and t[0] in prefixes
 
 
+def _in_range(lo: int, hi: int) -> Callable[[str], bool]:
+    return lambda t: t.isdigit() and lo <= int(t) <= hi
+
+
 REGISTRY: dict[str, FormatConfig] = {
     "authority": FormatConfig(
         slug="authority", name="Authority",
@@ -84,11 +92,16 @@ REGISTRY: dict[str, FormatConfig] = {
         slug="bibliographic", name="Bibliographic",
         title="MARC 21 Format for Bibliographic Data",
         marc_path="bibliographic", prefix="bd", dirname="Bibliographic",
+        shared_groups=[("bd760787", _in_range(760, 787))],
     ),
     "holdings": FormatConfig(
         slug="holdings", name="Holdings",
         title="MARC 21 Format for Holdings Data",
         marc_path="holdings", prefix="hd", dirname="Holdings",
+        shared_groups=[("hd853855", _in_range(853, 855)),
+                       ("hd863865", _in_range(863, 865)),
+                       ("hd866868", _in_range(866, 868)),
+                       ("hd876878", _in_range(876, 878))],
     ),
     "classification": FormatConfig(
         slug="classification", name="Classification",

@@ -98,6 +98,9 @@ header h1 .v{color:var(--faint);font-weight:400;margin-left:6px}
 .file-head .name{color:var(--muted);font-weight:400;font-size:13px;
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .file-head .chev{margin-left:auto;color:var(--faint);font-size:10px;transition:transform .15s}
+.gnote{padding:7px 16px;font-size:12px;color:var(--muted);background:#fbfcfd;
+  border-bottom:1px solid var(--border-soft)}
+.file.collapsed .gnote{display:none}
 .file.collapsed .chev{transform:rotate(-90deg)}
 .file.collapsed .diff{display:none}
 .diff{font-family:var(--mono);font-size:12px;line-height:1.6;overflow-x:auto}
@@ -216,11 +219,12 @@ function changeLink(versionId){
 }
 
 function jumpTo(tag){
-  let box=document.getElementById("f-"+tag);
+  const sel='.file[data-tags~="'+tag+'"]';
+  let box=document.querySelector(sel);
   if(!box && query){                       // hidden by the filter: clear it
     query=""; const s=$(".search"); if(s)s.value="";
     renderFiles(fmtData().steps[stepIdx]);
-    box=document.getElementById("f-"+tag);
+    box=document.querySelector(sel);
   }
   if(!box)return;
   box.classList.remove("collapsed");
@@ -231,12 +235,17 @@ function jumpTo(tag){
 
 function renderQuicklist(step){
   const list=el("div","quicklist");
-  step.files.forEach(f=>{
+  groupFiles(step.files).forEach(g=>{
     const a=el("a","qitem");
-    a.appendChild(el("span","qdot "+f.status));
-    a.appendChild(el("span","qtag",f.tag));
-    a.appendChild(el("span","qstatus",f.status));
-    a.onclick=()=>jumpTo(f.tag);
+    a.appendChild(el("span","qdot "+g.status));
+    if(g.files.length>1){
+      a.appendChild(el("span","qtag",g.files.length+" fields"));
+      a.title=g.files.map(f=>f.tag).join(", ");
+    }else{
+      a.appendChild(el("span","qtag",g.files[0].tag));
+    }
+    a.appendChild(el("span","qstatus",g.status));
+    a.onclick=()=>jumpTo(g.files[0].tag);
     list.appendChild(a);
   });
   return list;
@@ -272,33 +281,70 @@ function renderMain(){
   renderFiles(step);
 }
 
+// Fields whose changed (+/-) lines are byte-identical received the same
+// edit (e.g. an appendix revision fanning out to ~90 fields); show those
+// once instead of repeating the same diff over and over.
+function changeSignature(f){
+  // trim + drop trailing commas: the same edit serializes with or without a
+  // trailing comma depending on whether another key follows in that field
+  return f.status+"|"+f.lines
+    .filter(l=>l[0]==="+"||l[0]==="-")
+    .map(l=>l[0]+l[1].trim().replace(/,$/,"")).join("|");
+}
+
+function groupFiles(files){
+  const order=[], map=new Map();
+  files.forEach(f=>{
+    const sig=changeSignature(f);
+    if(!map.has(sig)){map.set(sig,{status:f.status,files:[]}); order.push(map.get(sig));}
+    map.get(sig).files.push(f);
+  });
+  return order;
+}
+
+function buildDiff(f){
+  const diff=el("div","diff");
+  const lines=el("div","lines");
+  f.lines.forEach(([m,t])=>{
+    const cls=m==="+"?"add":m==="-"?"del":m==="@"?"hunk":"ctx";
+    const line=el("div","line "+cls);
+    line.appendChild(el("span","gut",m==="@"?"":m===" "?"":m));
+    line.appendChild(el("span","txt",t));
+    lines.appendChild(line);
+  });
+  diff.appendChild(lines);
+  return diff;
+}
+
 function renderFiles(step){
   const host=$("#files"); host.innerHTML="";
   const files=step.files.filter(matches);
   if(!files.length){host.appendChild(el("div","empty",
      step.files.length?"No fields match “"+query+"”":"No field-level changes in this update.")); return;}
-  files.forEach(f=>{
-    const big=f.lines.length>400;
-    const box=el("div","file"+(big?" collapsed":""));
-    box.id="f-"+f.tag;
+  groupFiles(files).forEach(g=>{
+    const rep=g.files[0], grouped=g.files.length>1;
+    const big=rep.lines.length>400;
+    const box=el("div","file"+((big&&!grouped)?" collapsed":""));
+    box.dataset.tags=g.files.map(f=>f.tag).join(" ");
     const head=el("div","file-head");
-    head.appendChild(el("span","badge "+f.status,f.status));
-    head.appendChild(el("span","tag",f.tag));
-    head.appendChild(el("span","name",labelOf(f)));
+    head.appendChild(el("span","badge "+g.status,g.status));
+    if(grouped){
+      const tags=g.files.map(f=>f.tag);
+      head.appendChild(el("span","tag",tags.length+" fields"));
+      head.appendChild(el("span","name","identical change in "+tags.length+
+        " fields ("+tags.slice(0,6).join(", ")+(tags.length>6?", …":"")+")"));
+    }else{
+      head.appendChild(el("span","tag",rep.tag));
+      head.appendChild(el("span","name",labelOf(rep)));
+    }
     const chev=el("span","chev","▼"); head.appendChild(chev);
     head.onclick=()=>box.classList.toggle("collapsed");
     box.appendChild(head);
-    const diff=el("div","diff");
-    const lines=el("div","lines");
-    f.lines.forEach(([m,t])=>{
-      const cls=m==="+"?"add":m==="-"?"del":m==="@"?"hunk":"ctx";
-      const line=el("div","line "+cls);
-      line.appendChild(el("span","gut",m==="@"?"":m===" "?"":m));
-      line.appendChild(el("span","txt",t));
-      lines.appendChild(line);
-    });
-    diff.appendChild(lines);
-    box.appendChild(diff);
+    if(grouped)
+      box.appendChild(el("div","gnote","Applies to: "+
+        g.files.map(f=>f.tag).join(", ")+
+        ". One diff shown (field "+rep.tag+"); the change is identical in every listed field."));
+    box.appendChild(buildDiff(rep));
     host.appendChild(box);
   });
 }

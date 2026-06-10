@@ -222,6 +222,41 @@ def test_field_urls_follow_loc_page_naming(schema, bib):
     assert ci["008"]["url"].endswith("/ci008.html")
 
 
+def test_field_scope_exclusions_and_ranges():
+    from lxml import etree
+    from marc_avram import parsers
+    ex = etree.fromstring(
+        '<subfield field="[all except 533, 760-788, 800-830, and 856]"/>')
+    assert parsers.in_scope(ex, "650")
+    assert not parsers.in_scope(ex, "773")      # inside an excluded range
+    assert not parsers.in_scope(ex, "810")
+    assert not parsers.in_scope(ex, "533")
+    inc = etree.fromstring('<subfield field="[760-788 only]"/>')
+    assert parsers.in_scope(inc, "773") and not parsers.in_scope(inc, "300")
+
+
+def test_appendix_splice_respects_exclusion_scope():
+    # Appendix H $7 was scoped "[all except 856 and 857]" at update 36-40:
+    # 750 must get the spliced prose, 856 must keep its own definition.
+    f = build_schema("authority", SRC, 40)["fields"]
+    assert f["750"]["subfields"]["7"]["description"].startswith(
+        "Subfield $7 contains a data provenance value")
+    assert not f["856"]["subfields"]["7"]["description"].startswith(
+        "Subfield $7 contains")
+
+
+def test_shared_group_subfields(bib):
+    """Linking fields (bib 760-787) and holdings 853-878 source their FULL
+    subfields from their General Information docs (bd760787, hd853855...)."""
+    assert set("abst") <= set(bib["773"]["subfields"])
+    assert bib["773"]["subfields"]["7"]["label"] == "Control subfield"
+    # range-scoped appendix splice: $y "[533 and 800-830 only]" covers 810
+    assert bib["810"]["subfields"]["y"]["description"].startswith("Subfield $y")
+    hold = build_format("holdings", XML)["fields"]
+    for t in ("853", "863", "866", "876"):
+        assert hold[t].get("subfields"), f"holdings {t} has no subfields"
+
+
 def test_updates_overview_parses():
     from marc_avram.updates import parse_overview
     src = next((ROOT / "MARC_HTML").glob("MARC Format Documentation Overview*"))

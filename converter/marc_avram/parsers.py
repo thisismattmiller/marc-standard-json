@@ -14,23 +14,40 @@ from lxml import etree
 from . import xmlutil
 
 _TAG3 = re.compile(r"\d{3}")
+_TAG_RANGE = re.compile(r"(\d{3})(?:\s*-\s*(\d{3}))?")
+_EXCEPT = re.compile(r"\bexcept\b", re.I)
 
 # Scope expressed only in the display name, e.g. bdx00's $i
 # "Relationship information [700]" (the lone definition with no @field).
 _NAME_SCOPE = re.compile(r"\s*\[(\d{3}(?:/\d{3})*)/?\]$")
 
 
-def parse_field_scope(el: etree._Element) -> set[str] | None:
-    """Parse a ``field="[400/500/700]"`` scope attribute into a tag set.
+def _expand_tags(raw: str) -> set[str]:
+    """All tags in ``raw``, expanding ``760-788``-style ranges."""
+    tags: set[str] = set()
+    for a, b in _TAG_RANGE.findall(raw):
+        if b:
+            tags.update(f"{n:03d}" for n in range(int(a), int(b) + 1))
+        else:
+            tags.add(a)
+    return tags
 
-    Tolerates the verified ``adx11`` typo ``[411/511/711/]`` (trailing slash)
-    and prose-ish forms like ``[856 and 857 only]``.  When the attribute is
-    absent, falls back to a trailing ``[700]``-style tag list in ``<name>``.
-    Returns ``None`` when the element applies to every member of its group."""
+
+def parse_field_scope(el: etree._Element):
+    """Parse a ``field`` scope attribute.
+
+    Returns ``None`` (applies to every member), a tag set for inclusion
+    scopes (``"[400/500/700]"``, ``"[856 and 857 only]"``, ``"[760-788
+    only]"`` — ranges are expanded), or ``("except", tags)`` for exclusion
+    scopes (``"[all except 856 and 857]"``).  Tolerates the verified
+    ``adx11`` typo ``[411/511/711/]``.  When the attribute is absent, falls
+    back to a trailing ``[700]``-style tag list in ``<name>``."""
     raw = el.get("field")
     if raw is not None:
-        tags = set(_TAG3.findall(raw))
-        return tags or None
+        tags = _expand_tags(raw)
+        if not tags:
+            return None
+        return ("except", tags) if _EXCEPT.search(raw) else tags
     name = xmlutil.child_text(el, "name")
     if name:
         m = _NAME_SCOPE.search(name)
@@ -39,9 +56,16 @@ def parse_field_scope(el: etree._Element) -> set[str] | None:
     return None
 
 
+def scope_match(scope, tag: str) -> bool:
+    if scope is None:
+        return True
+    if isinstance(scope, tuple):       # ("except", tags)
+        return tag not in scope[1]
+    return tag in scope
+
+
 def in_scope(el: etree._Element, tag: str) -> bool:
-    scope = parse_field_scope(el)
-    return scope is None or tag in scope
+    return scope_match(parse_field_scope(el), tag)
 
 
 _SKIP_ANCESTORS = {"history", "examplesec", "examplegp", "example"}
