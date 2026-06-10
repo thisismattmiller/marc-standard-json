@@ -1,0 +1,25 @@
+[project]
+name = "marc-avram"
+version = "0.1.0"
+description = "Convert MARC 21 Authority publishing XML to an Avram schema"
+requires-python = ">=3.11"
+dependencies = [
+    "lxml>=5.0",
+    "jsonschema>=4.0",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+marc-avram = "marc_avram.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["marc_avram"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+]

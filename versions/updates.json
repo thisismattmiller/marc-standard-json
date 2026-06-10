@@ -1,0 +1,1087 @@
+{
+  "bibliographic": {
+    "base": {
+      "label": "Base edition",
+      "date": "February 1999",
+      "url": "https://www.loc.gov/marc/bibbas99.html"
+    },
+    "1": {
+      "label": "Update No. 1",
+      "date": "October 2000",
+      "url": "https://www.loc.gov/marc/bibupdt00.html"
+    },
+    "2": {
+      "label": "Update No. 2",
+      "date": "October 2001",
+      "url": "https://www.loc.gov/marc/bibupdt02.html"
+    },
+    "3": {
+      "label": "Update No. 3",
+      "date": "October 2002",
+      "url": "https://www.loc.gov/marc/bibupdt03.html"
+    },
+    "4": {
+      "label": "Update No. 4",
+      "date": "October 2003",
+      "url": "https://www.loc.gov/marc/bibupdt04.html"
+    },
+    "5": {
+      "label": "Update No. 5",
+      "date": "October 2004",
+      "url": "https://www.loc.gov/marc/changes_concise_up5.html#biblio"
+    },
+    "6": {
+      "label": "Update No. 6",
+      "date": "October 2005",
+      "url": "https://www.loc.gov/marc/changes_concise_up6.html#biblio"
+    },
+    "7": {
+      "label": "Update No. 7",
+      "date": "October 2006",
+      "url": "https://www.loc.gov/marc/changes_concise_up7.html#biblio"
+    },
+    "8": {
+      "label": "Update No. 8",
+      "date": "October 2007",
+      "url": "https://www.loc.gov/marc/up8bibliographic/bdapndxg.html"
+    },
+    "9": {
+      "label": "Update No. 9",
+      "date": "October 2008",
+      "url": "https://www.loc.gov/marc/up9bibliographic/bdapndxg.html"
+    },
+    "10": {
+      "label": "Update No. 10",
+      "date": "October 2009",
+      "url": "https://www.loc.gov/marc/up10_11bibliographic/bdapndxg.html"
+    },
+    "11": {
+      "label": "Update No. 11",
+      "date": "February 2010",
+      "url": "https://www.loc.gov/marc/up10_11bibliographic/bdapndxg.html"
+    },
+    "12": {
+      "label": "Update No. 12",
+      "date": "October 2010",
+      "url": "https://www.loc.gov/marc/up12bibliographic/bdapndxg.html"
+    },
+    "13": {
+      "label": "Update No. 13",
+      "date": "September 2011",
+      "url": "https://www.loc.gov/marc/up13bibliographic/bdapndxg.html"
+    },
+    "14": {
+      "label": "Update No. 14",
+      "date": "April 2012",
+      "url": "https://www.loc.gov/marc/up14bibliographic/bdapndxg.html"
+    },
+    "15": {
+      "label": "Update No. 15",
+      "date": "September 2012",
+      "url": "https://www.loc.gov/marc/up15bibliographic/bdapndxg.html"
+    },
+    "16": {
+      "label": "Update No. 16",
+      "date": "April 2013",
+      "url": "https://www.loc.gov/marc/up16bibliographic/bdapndxg.html"
+    },
+    "17": {
+      "label": "Update No. 17",
+      "date": "September 2013",
+      "url": "https://www.loc.gov/marc/up17bibliographic/bdapndxg.html"
+    },
+    "18": {
+      "label": "Update No. 18",
+      "date": "April 2014",
+      "url": "https://www.loc.gov/marc/up18bibliographic/bdapndxg.html"
+    },
+    "19": {
+      "label": "Update No. 19",
+      "date": "October 2014",
+      "url": "https://www.loc.gov/marc/up19bibliographic/bdapndxg.html"
+    },
+    "20": {
+      "label": "Update No. 20",
+      "date": "April 2015",
+      "url": "https://www.loc.gov/marc/up20bibliographic/bdapndxg.html"
+    },
+    "21": {
+      "label": "Update No. 21",
+      "date": "September 2015",
+      "url": "https://www.loc.gov/marc/up21bibliographic/bdapndxg.html"
+    },
+    "22": {
+      "label": "Update No. 22",
+      "date": "April 2016",
+      "url": "https://www.loc.gov/marc/up22bibliographic/bdapndxg.html"
+    },
+    "23": {
+      "label": "Update No. 23",
+      "date": "November 2016",
+      "url": "https://www.loc.gov/marc/up23bibliographic/bdapndxg.html"
+    },
+    "24": {
+      "label": "Update No. 24",
+      "date": "May 2017",
+      "url": "https://www.loc.gov/marc/up24bibliographic/bdapndxg.html"
+    },
+    "25": {
+      "label": "Update No. 25",
+      "date": "December 2017",
+      "url": "https://www.loc.gov/marc/up25bibliographic/bdapndxg.html"
+    },
+    "26": {
+      "label": "Update No. 26",
+      "date": "April 2018",
+      "url": "https://www.loc.gov/marc/up26bibliographic/bdapndxg.html"
+    },
+    "27": {
+      "label": "Update No. 27",
+      "date": "November 2018",
+      "url": "https://www.loc.gov/marc/up27bibliographic/bdapndxg.html"
+    },
+    "28": {
+      "label": "Update No. 28",
+      "date": "May 2019",
+      "url": "https://www.loc.gov/marc/up28bibliographic/bdapndxg.html"
+    },
+    "29": {
+      "label": "Update No. 29",
+      "date": "November 2019",
+      "url": "https://www.loc.gov/marc/up29bibliographic/bdapndxg.html"
+    },
+    "30": {
+      "label": "Update No. 30",
+      "date": "May 2020",
+      "url": "https://www.loc.gov/marc/up30bibliographic/bdapndxg.html"
+    },
+    "31": {
+      "label": "Update No. 31",
+      "date": "December 2020",
+      "url": "https://www.loc.gov/marc/up31bibliographic/bdapndxg.html"
+    },
+    "32": {
+      "label": "Update No. 32",
+      "date": "June 2021",
+      "url": "https://www.loc.gov/marc/up32bibliographic/bdapndxg.html"
+    },
+    "33": {
+      "label": "Update No. 33",
+      "date": "November 2021",
+      "url": "https://www.loc.gov/marc/up33bibliographic/bdapndxg.html"
+    },
+    "34": {
+      "label": "Update No. 34",
+      "date": "July 2022",
+      "url": "https://www.loc.gov/marc/up34bibliographic/bdapndxg.html"
+    },
+    "35": {
+      "label": "Update No. 35",
+      "date": "December 2022",
+      "url": "https://www.loc.gov/marc/up35bibliographic/bdapndxg.html"
+    },
+    "36": {
+      "label": "Update No. 36",
+      "date": "June 2023",
+      "url": "https://www.loc.gov/marc/up36bibliographic/bdapndxg.html"
+    },
+    "37": {
+      "label": "Update No. 37",
+      "date": "December 2023",
+      "url": "https://www.loc.gov/marc/up37bibliographic/bdapndxg.html"
+    },
+    "38": {
+      "label": "Update No. 38",
+      "date": "June 2024",
+      "url": "https://www.loc.gov/marc/up38bibliographic/bdapndxg.html"
+    },
+    "39": {
+      "label": "Update No. 39",
+      "date": "December 2024",
+      "url": "https://www.loc.gov/marc/up39bibliographic/bdapndxg.html"
+    },
+    "40": {
+      "label": "Update No. 40",
+      "date": "June 2025",
+      "url": "https://www.loc.gov/marc/up40bibliographic/bdapndxg.html"
+    },
+    "41": {
+      "label": "Update No. 41",
+      "date": "December 2025",
+      "url": "https://www.loc.gov/marc/up41bibliographic/bdapndxg.html"
+    },
+    "42": {
+      "label": "Update No. 42",
+      "date": "May 2026",
+      "url": "https://www.loc.gov/marc/bibliographic/bdapndxg.html"
+    }
+  },
+  "authority": {
+    "base": {
+      "label": "Base edition",
+      "date": "October 1999",
+      "url": "https://www.loc.gov/marc/adbase99.html"
+    },
+    "1": {
+      "label": "Update No. 1",
+      "date": "October 2000",
+      "url": "https://www.loc.gov/marc/adupdt00.html"
+    },
+    "2": {
+      "label": "Update No. 2",
+      "date": "October 2001",
+      "url": "https://www.loc.gov/marc/adupdt02.html"
+    },
+    "3": {
+      "label": "Update No. 3",
+      "date": "October 2002",
+      "url": "https://www.loc.gov/marc/adupdt03.html"
+    },
+    "4": {
+      "label": "Update No. 4",
+      "date": "October 2003",
+      "url": "https://www.loc.gov/marc/adupdt04.html"
+    },
+    "5": {
+      "label": "Update No. 5",
+      "date": "October 2004",
+      "url": "https://www.loc.gov/marc/changes_concise_up5.html#authority"
+    },
+    "6": {
+      "label": "Update No. 6",
+      "date": "October 2005",
+      "url": "https://www.loc.gov/marc/changes_concise_up6.html#authority"
+    },
+    "7": {
+      "label": "Update No. 7",
+      "date": "October 2006",
+      "url": "https://www.loc.gov/marc/changes_concise_up7.html#authority"
+    },
+    "8": {
+      "label": "Update No. 8",
+      "date": "October 2007",
+      "url": "https://www.loc.gov/marc/up8authority/adapndxf.html"
+    },
+    "9": {
+      "label": "Update No. 9",
+      "date": "October 2008",
+      "url": "https://www.loc.gov/marc/up9authority/adapndxf.html"
+    },
+    "10": {
+      "label": "Update No. 10",
+      "date": "October 2009",
+      "url": "https://www.loc.gov/marc/up10_11authority/adapndxf.html"
+    },
+    "11": {
+      "label": "Update No. 11",
+      "date": "February 2010",
+      "url": "https://www.loc.gov/marc/up10_11authority/adapndxf.html"
+    },
+    "12": {
+      "label": "Update No. 12",
+      "date": "October 2010",
+      "url": "https://www.loc.gov/marc/up12authority/adapndxf.html"
+    },
+    "13": {
+      "label": "Update No. 13",
+      "date": "September 2011",
+      "url": "https://www.loc.gov/marc/up13authority/adapndxf.html"
+    },
+    "14": {
+      "label": "Update No. 14",
+      "date": "April 2012",
+      "url": "https://www.loc.gov/marc/up14authority/adapndxf.html"
+    },
+    "15": {
+      "label": "Update No. 15",
+      "date": "September 2012",
+      "url": "https://www.loc.gov/marc/up15authority/adapndxf.html"
+    },
+    "16": {
+      "label": "Update No. 16",
+      "date": "April 2013",
+      "url": "https://www.loc.gov/marc/up16authority/adapndxf.html"
+    },
+    "17": {
+      "label": "Update No. 17",
+      "date": "September 2013",
+      "url": "https://www.loc.gov/marc/up17authority/adapndxf.html"
+    },
+    "18": {
+      "label": "Update No. 18",
+      "date": "April 2014",
+      "url": "https://www.loc.gov/marc/up18authority/adapndxf.html"
+    },
+    "19": {
+      "label": "Update No. 19",
+      "date": "October 2014",
+      "url": "https://www.loc.gov/marc/up19authority/adapndxf.html"
+    },
+    "20": {
+      "label": "Update No. 20",
+      "date": "April 2015",
+      "url": "https://www.loc.gov/marc/up20authority/adapndxf.html"
+    },
+    "21": {
+      "label": "Update No. 21",
+      "date": "September 2015",
+      "url": "https://www.loc.gov/marc/up21authority/adapndxf.html"
+    },
+    "22": {
+      "label": "Update No. 22",
+      "date": "April 2016",
+      "url": "https://www.loc.gov/marc/up22authority/adapndxf.html"
+    },
+    "23": {
+      "label": "Update No. 23",
+      "date": "November 2016",
+      "url": "https://www.loc.gov/marc/up23authority/adapndxf.html"
+    },
+    "24": {
+      "label": "Update No. 24",
+      "date": "May 2017",
+      "url": "https://www.loc.gov/marc/up24authority/adapndxf.html"
+    },
+    "25": {
+      "label": "Update No. 25",
+      "date": "December 2017",
+      "url": "https://www.loc.gov/marc/up25authority/adapndxf.html"
+    },
+    "26": {
+      "label": "Update No. 26",
+      "date": "April 2018",
+      "url": "https://www.loc.gov/marc/up26authority/adapndxf.html"
+    },
+    "27": {
+      "label": "Update No. 27",
+      "date": "November 2018",
+      "url": "https://www.loc.gov/marc/up27authority/adapndxf.html"
+    },
+    "28": {
+      "label": "Update No. 28",
+      "date": "May 2019",
+      "url": "https://www.loc.gov/marc/up28authority/adapndxf.html"
+    },
+    "29": {
+      "label": "Update No. 29",
+      "date": "November 2019",
+      "url": "https://www.loc.gov/marc/up29authority/adapndxf.html"
+    },
+    "30": {
+      "label": "Update No. 30",
+      "date": "May 2020",
+      "url": "https://www.loc.gov/marc/up30authority/adapndxf.html"
+    },
+    "31": {
+      "label": "Update No. 31",
+      "date": "December 2020",
+      "url": "https://www.loc.gov/marc/up31authority/adapndxf.html"
+    },
+    "32": {
+      "label": "Update No. 32",
+      "date": "June 2021",
+      "url": "https://www.loc.gov/marc/up32authority/adapndxf.html"
+    },
+    "33": {
+      "label": "Update No. 33",
+      "date": "November 2021",
+      "url": "https://www.loc.gov/marc/up33authority/adapndxf.html"
+    },
+    "34": {
+      "label": "Update No. 34",
+      "date": "July 2022",
+      "url": "https://www.loc.gov/marc/up34authority/adapndxf.html"
+    },
+    "35": {
+      "label": "Update No. 35",
+      "date": "December 2022",
+      "url": "https://www.loc.gov/marc/up35authority/adapndxf.html"
+    },
+    "36": {
+      "label": "Update No. 36",
+      "date": "June 2023",
+      "url": "https://www.loc.gov/marc/up36authority/adapndxf.html"
+    },
+    "37": {
+      "label": "Update No. 37",
+      "date": "December 2023",
+      "url": "https://www.loc.gov/marc/up37authority/adapndxf.html"
+    },
+    "38": {
+      "label": "Update No. 38",
+      "date": "June 2024",
+      "url": "https://www.loc.gov/marc/up38authority/adapndxf.html"
+    },
+    "39": {
+      "label": "Update No. 39",
+      "date": "December 2024",
+      "url": "https://www.loc.gov/marc/up39authority/adapndxf.html"
+    },
+    "40": {
+      "label": "Update No. 40",
+      "date": "June 2025",
+      "url": "https://www.loc.gov/marc/up40authority/adapndxf.html"
+    },
+    "41": {
+      "label": "Update No. 41",
+      "date": "December 2025",
+      "url": "https://www.loc.gov/marc/up41authority/adapndxf.html"
+    },
+    "42": {
+      "label": "Update No. 42",
+      "date": "May2026",
+      "url": "https://www.loc.gov/marc/authority/adapndxf.html"
+    }
+  },
+  "holdings": {
+    "base": {
+      "label": "Base edition",
+      "date": "January 2000",
+      "url": "https://www.loc.gov/marc/hdbase00.html"
+    },
+    "1": {
+      "label": "Update No. 1",
+      "date": "October 2000",
+      "url": "https://www.loc.gov/marc/hdupdt00.html"
+    },
+    "2": {
+      "label": "Update No. 2",
+      "date": "October 2001",
+      "url": "https://www.loc.gov/marc/hdupdt02.html"
+    },
+    "3": {
+      "label": "Update No. 3",
+      "date": "October 2002",
+      "url": "https://www.loc.gov/marc/hdupdt03.html"
+    },
+    "4": {
+      "label": "Update No. 4",
+      "date": "October 2003",
+      "url": "https://www.loc.gov/marc/hdupdt04.html"
+    },
+    "5": {
+      "label": "Update No. 5",
+      "date": "October 2004",
+      "url": "https://www.loc.gov/marc/changes_concise_up5.html#holdings"
+    },
+    "6": {
+      "label": "Update No. 6",
+      "date": "October 2005",
+      "url": "https://www.loc.gov/marc/changes_concise_up6.html#holdings"
+    },
+    "7": {
+      "label": "Update No. 7",
+      "date": "October 2006",
+      "url": "https://www.loc.gov/marc/changes_concise_up7.html#holdings"
+    },
+    "8": {
+      "label": "Update No. 8",
+      "date": "October 2007",
+      "url": "https://www.loc.gov/marc/up8holdings/hdapndxf.html"
+    },
+    "9": {
+      "label": "Update No. 9",
+      "date": "October 2008",
+      "url": "https://www.loc.gov/marc/up9holdings/hdapndxf.html"
+    },
+    "10": {
+      "label": "Update No. 10",
+      "date": "October 2009",
+      "url": "https://www.loc.gov/marc/up10_11holdings/hdapndxf.html"
+    },
+    "11": {
+      "label": "Update No. 11",
+      "date": "February 2010",
+      "url": "https://www.loc.gov/marc/up10_11holdings/hdapndxf.html"
+    },
+    "12": {
+      "label": "Update No. 12",
+      "date": "October 2010",
+      "url": "https://www.loc.gov/marc/up12holdings/hdapndxf.html"
+    },
+    "13": {
+      "label": "Update No. 13",
+      "date": "September 2011",
+      "url": "https://www.loc.gov/marc/up13holdings/hdapndxf.html"
+    },
+    "14": {
+      "label": "Update No. 14",
+      "date": "April 2012",
+      "url": "https://www.loc.gov/marc/up14holdings/hdapndxf.html"
+    },
+    "15": {
+      "label": "Update No. 15",
+      "date": "September 2012",
+      "url": "https://www.loc.gov/marc/up15holdings/hdapndxf.html"
+    },
+    "16": {
+      "label": "Update No. 16",
+      "date": "April 2013",
+      "url": "https://www.loc.gov/marc/up16holdings/hdapndxf.html"
+    },
+    "17": {
+      "label": "Update No. 17",
+      "date": "September 2013",
+      "url": "https://www.loc.gov/marc/up17holdings/hdapndxf.html"
+    },
+    "18": {
+      "label": "Update No. 18",
+      "date": "April 2014",
+      "url": "https://www.loc.gov/marc/up18holdings/hdapndxf.html"
+    },
+    "19": {
+      "label": "Update No. 19",
+      "date": "October 2014",
+      "url": "https://www.loc.gov/marc/up19holdings/hdapndxf.html"
+    },
+    "20": {
+      "label": "Update No. 20",
+      "date": "April 2015",
+      "url": "https://www.loc.gov/marc/up20holdings/hdapndxf.html"
+    },
+    "21": {
+      "label": "Update No. 21",
+      "date": "September 2015",
+      "url": "https://www.loc.gov/marc/up21holdings/hdapndxf.html"
+    },
+    "22": {
+      "label": "Update No. 22",
+      "date": "April 2016",
+      "url": "https://www.loc.gov/marc/up22holdings/hdapndxf.html"
+    },
+    "23": {
+      "label": "Update No. 23",
+      "date": "November 2016",
+      "url": "https://www.loc.gov/marc/up23holdings/hdapndxf.html"
+    },
+    "24": {
+      "label": "Update No. 24",
+      "date": "May 2017",
+      "url": "https://www.loc.gov/marc/up24holdings/hdapndxf.html"
+    },
+    "25": {
+      "label": "Update No. 25",
+      "date": "December 2017",
+      "url": "https://www.loc.gov/marc/up25holdings/hdapndxf.html"
+    },
+    "26": {
+      "label": "Update No. 26",
+      "date": "April 2018",
+      "url": "https://www.loc.gov/marc/up26holdings/hdapndxf.html"
+    },
+    "27": {
+      "label": "Update No. 27",
+      "date": "November 2018",
+      "url": "https://www.loc.gov/marc/up27holdings/hdapndxf.html"
+    },
+    "28": {
+      "label": "Update No. 28",
+      "date": "May 2019",
+      "url": "https://www.loc.gov/marc/up28holdings/hdapndxf.html"
+    },
+    "29": {
+      "label": "Update No. 29",
+      "date": "November 2019",
+      "url": "https://www.loc.gov/marc/up29holdings/hdapndxf.html"
+    },
+    "30": {
+      "label": "Update No. 30",
+      "date": "May 2020",
+      "url": "https://www.loc.gov/marc/up30holdings/hdapndxf.html"
+    },
+    "31": {
+      "label": "Update No. 31",
+      "date": "December 2020",
+      "url": "https://www.loc.gov/marc/up31holdings/hdapndxf.html"
+    },
+    "32": {
+      "label": "Update No. 32",
+      "date": "June 2021",
+      "url": "https://www.loc.gov/marc/up32holdings/hdapndxf.html"
+    },
+    "33": {
+      "label": "Update No. 33",
+      "date": "November 2021",
+      "url": "https://www.loc.gov/marc/up33holdings/hdapndxf.html"
+    },
+    "34": {
+      "label": "Update No. 34",
+      "date": "July 2022",
+      "url": "https://www.loc.gov/marc/up34holdings/hdapndxf.html"
+    },
+    "35": {
+      "label": "Update No. 35",
+      "date": "December 2022",
+      "url": "https://www.loc.gov/marc/up35holdings/hdapndxf.html"
+    },
+    "36": {
+      "label": "Update No. 36",
+      "date": "June 2023",
+      "url": "https://www.loc.gov/marc/up36holdings/hdapndxf.html"
+    },
+    "37": {
+      "label": "Update No. 37",
+      "date": "December 2023",
+      "url": "https://www.loc.gov/marc/up37holdings/hdapndxf.html"
+    },
+    "38": {
+      "label": "Update No. 38",
+      "date": "June 2024",
+      "url": "https://www.loc.gov/marc/up38holdings/hdapndxf.html"
+    },
+    "39": {
+      "label": "Update No. 39",
+      "date": "December 2024",
+      "url": "https://www.loc.gov/marc/up39holdings/hdapndxf.html"
+    },
+    "40": {
+      "label": "Update No. 40",
+      "date": "June 2025",
+      "url": "https://www.loc.gov/marc/up40holdings/hdapndxf.html"
+    },
+    "41": {
+      "label": "Update No. 41",
+      "date": "December 2025",
+      "url": "https://www.loc.gov/marc/up41holdings/hdapndxf.html"
+    },
+    "42": {
+      "label": "Update No. 42",
+      "date": "May 2026",
+      "url": "https://www.loc.gov/marc/holdings/hdapndxf.html"
+    }
+  },
+  "classification": {
+    "base": {
+      "label": "Base edition",
+      "date": "January 2000",
+      "url": "https://www.loc.gov/marc/cdbase00.html"
+    },
+    "1": {
+      "label": "Update No. 1",
+      "date": "October 2000",
+      "url": "https://www.loc.gov/marc/cdupdt00.html"
+    },
+    "2": {
+      "label": "Update No. 2",
+      "date": "October 2001",
+      "url": "https://www.loc.gov/marc/cdupdt02.html"
+    },
+    "3": {
+      "label": "Update No. 3",
+      "date": "October 2002",
+      "url": "https://www.loc.gov/marc/cdupdt03.html"
+    },
+    "4": {
+      "label": "Update No. 4",
+      "date": "October 2003",
+      "url": "https://www.loc.gov/marc/cdupdt04.html"
+    },
+    "5": {
+      "label": "Update No. 5",
+      "date": "October 2004",
+      "url": "https://www.loc.gov/marc/changes_concise_up5.html#class"
+    },
+    "6": {
+      "label": "Update No. 6",
+      "date": "October 2005",
+      "url": "https://www.loc.gov/marc/changes_concise_up6.html#class"
+    },
+    "7": {
+      "label": "Update No. 7",
+      "date": "October 2006",
+      "url": "https://www.loc.gov/marc/changes_concise_up7.html#class"
+    },
+    "8": {
+      "label": "Update No. 8",
+      "date": "October 2007",
+      "url": "https://www.loc.gov/marc/up8classification/cdapndxe.html"
+    },
+    "9": {
+      "label": "Update No. 9",
+      "date": "October 2008",
+      "url": "https://www.loc.gov/marc/up9classification/cdapndxe.html"
+    },
+    "10": {
+      "label": "Update No. 10",
+      "date": "October 2009",
+      "url": "https://www.loc.gov/marc/up10_11classification/cdapndxe.html"
+    },
+    "11": {
+      "label": "Update No. 11",
+      "date": "February 2010",
+      "url": "https://www.loc.gov/marc/up10_11classification/cdapndxe.html"
+    },
+    "12": {
+      "label": "Update No. 12",
+      "date": "October 2010",
+      "url": "https://www.loc.gov/marc/up12classification/cdapndxe.html"
+    },
+    "13": {
+      "label": "Update No. 13",
+      "date": "September 2011",
+      "url": "https://www.loc.gov/marc/up13classification/cdapndxe.html"
+    },
+    "14": {
+      "label": "Update No. 14",
+      "date": "April 2012",
+      "url": "https://www.loc.gov/marc/up14classification/cdapndxe.html"
+    },
+    "15": {
+      "label": "Update No. 15",
+      "date": "September 2012",
+      "url": "https://www.loc.gov/marc/up15classification/cdapndxe.html"
+    },
+    "16": {
+      "label": "Update No. 16",
+      "date": "April 2013",
+      "url": "https://www.loc.gov/marc/up16classification/cdapndxe.html"
+    },
+    "17": {
+      "label": "Update No. 17",
+      "date": "September 2013",
+      "url": "https://www.loc.gov/marc/up17classification/cdapndxe.html"
+    },
+    "18": {
+      "label": "Update No. 18",
+      "date": "April 2014",
+      "url": "https://www.loc.gov/marc/up18classification/cdapndxe.html"
+    },
+    "19": {
+      "label": "Update No. 19",
+      "date": "October 2014",
+      "url": "https://www.loc.gov/marc/up19classification/cdapndxe.html"
+    },
+    "20": {
+      "label": "Update No. 20",
+      "date": "April 2015",
+      "url": "https://www.loc.gov/marc/up20classification/cdapndxe.html"
+    },
+    "21": {
+      "label": "Update No. 21",
+      "date": "September 2015",
+      "url": "https://www.loc.gov/marc/up21classification/cdapndxe.html"
+    },
+    "22": {
+      "label": "Update No. 22",
+      "date": "April 2016",
+      "url": "https://www.loc.gov/marc/up22classification/cdapndxe.html"
+    },
+    "23": {
+      "label": "Update No. 23",
+      "date": "November 2016",
+      "url": "https://www.loc.gov/marc/up23classification/cdapndxe.html"
+    },
+    "24": {
+      "label": "Update No. 24",
+      "date": "May 2017",
+      "url": "https://www.loc.gov/marc/up24classification/cdapndxe.html"
+    },
+    "25": {
+      "label": "Update No. 25",
+      "date": "December 2017",
+      "url": "https://www.loc.gov/marc/up25classification/cdapndxe.html"
+    },
+    "26": {
+      "label": "Update No. 26",
+      "date": "April 2018",
+      "url": "https://www.loc.gov/marc/up26classification/cdapndxe.html"
+    },
+    "27": {
+      "label": "Update No. 27",
+      "date": "November 2018",
+      "url": "https://www.loc.gov/marc/up27classification/cdapndxe.html"
+    },
+    "28": {
+      "label": "Update No. 28",
+      "date": "May 2019",
+      "url": "https://www.loc.gov/marc/up28classification/cdapndxe.html"
+    },
+    "29": {
+      "label": "Update No. 29",
+      "date": "November 2019",
+      "url": "https://www.loc.gov/marc/up29classification/cdapndxe.html"
+    },
+    "30": {
+      "label": "Update No. 30",
+      "date": "May 2020",
+      "url": "https://www.loc.gov/marc/up30classification/cdapndxe.html"
+    },
+    "31": {
+      "label": "Update No. 31",
+      "date": "December 2020",
+      "url": "https://www.loc.gov/marc/up31classification/cdapndxe.html"
+    },
+    "32": {
+      "label": "Update No. 32",
+      "date": "June 2021",
+      "url": "https://www.loc.gov/marc/up32classification/cdapndxe.html"
+    },
+    "33": {
+      "label": "Update No. 33",
+      "date": "November 2021",
+      "url": "https://www.loc.gov/marc/up33classification/cdapndxe.html"
+    },
+    "34": {
+      "label": "Update No. 34",
+      "date": "July 2022",
+      "url": "https://www.loc.gov/marc/up34classification/cdapndxe.html"
+    },
+    "35": {
+      "label": "Update No. 35",
+      "date": "December 2022",
+      "url": "https://www.loc.gov/marc/up35classification/cdapndxe.html"
+    },
+    "36": {
+      "label": "Update No. 36",
+      "date": "June 2023",
+      "url": "https://www.loc.gov/marc/up36classification/cdapndxe.html"
+    },
+    "37": {
+      "label": "Update No. 37",
+      "date": "December 2023",
+      "url": "https://www.loc.gov/marc/up37classification/cdapndxe.html"
+    },
+    "38": {
+      "label": "Update No. 38",
+      "date": "June 2024",
+      "url": "https://www.loc.gov/marc/up38classification/cdapndxe.html"
+    },
+    "39": {
+      "label": "Update No. 39",
+      "date": "December 2024",
+      "url": "https://www.loc.gov/marc/up39classification/cdapndxe.html"
+    },
+    "40": {
+      "label": "Update No. 40",
+      "date": "June 2025",
+      "url": "https://www.loc.gov/marc/up40classification/cdapndxe.html"
+    },
+    "41": {
+      "label": "Update No. 41",
+      "date": "December 2025",
+      "url": "https://www.loc.gov/marc/up41classification/cdapndxe.html"
+    },
+    "42": {
+      "label": "Update No. 42",
+      "date": "May 2026",
+      "url": "https://www.loc.gov/marc/classification/cdapndxe.html"
+    }
+  },
+  "community": {
+    "base": {
+      "label": "Base edition",
+      "date": "January 2000",
+      "url": "https://www.loc.gov/marc/cibase00.html"
+    },
+    "1": {
+      "label": "Update No. 1",
+      "date": "October 2000",
+      "url": "https://www.loc.gov/marc/ciupdt00.html"
+    },
+    "2": {
+      "label": "Update No. 2",
+      "date": "October 2001",
+      "url": "https://www.loc.gov/marc/ciupdt02.html"
+    },
+    "3": {
+      "label": "Update No. 3",
+      "date": "October 2002",
+      "url": "https://www.loc.gov/marc/ciupdt03.html"
+    },
+    "4": {
+      "label": "Update No. 4",
+      "date": "October 2003",
+      "url": "https://www.loc.gov/marc/ciupdt04.html"
+    },
+    "5": {
+      "label": "Update No. 5",
+      "date": "October 2004",
+      "url": "https://www.loc.gov/marc/changes_concise_up5.html#ciinfo"
+    },
+    "6": {
+      "label": "Update No. 6",
+      "date": "October 2005",
+      "url": "https://www.loc.gov/marc/changes_concise_up6.html#ciinfo"
+    },
+    "7": {
+      "label": "Update No. 7",
+      "date": "October 2006",
+      "url": "https://www.loc.gov/marc/changes_concise_up7.html#ciinfo"
+    },
+    "8": {
+      "label": "Update No. 8",
+      "date": "October 2007",
+      "url": "https://www.loc.gov/marc/up8community/ciapndxf.html"
+    },
+    "9": {
+      "label": "Update No. 9",
+      "date": "October 2008",
+      "url": "https://www.loc.gov/marc/up9community/ciapndxf.html"
+    },
+    "10": {
+      "label": "Update No. 10",
+      "date": "October 2009",
+      "url": "https://www.loc.gov/marc/up10_11community/ciapndxf.html"
+    },
+    "11": {
+      "label": "Update No. 11",
+      "date": "February 2010",
+      "url": "https://www.loc.gov/marc/up10_11community/ciapndxf.html"
+    },
+    "12": {
+      "label": "Update No. 12",
+      "date": "October 2010",
+      "url": "https://www.loc.gov/marc/up12community/ciapndxf.html"
+    },
+    "13": {
+      "label": "Update No. 13",
+      "date": "September 2011",
+      "url": "https://www.loc.gov/marc/up13community/ciapndxf.html"
+    },
+    "14": {
+      "label": "Update No. 14",
+      "date": "April 2012",
+      "url": "https://www.loc.gov/marc/up14community/ciapndxf.html"
+    },
+    "15": {
+      "label": "Update No. 15",
+      "date": "September 2012",
+      "url": "https://www.loc.gov/marc/up15community/ciapndxf.html"
+    },
+    "16": {
+      "label": "Update No. 16",
+      "date": "April 2013",
+      "url": "https://www.loc.gov/marc/up16community/ciapndxf.html"
+    },
+    "17": {
+      "label": "Update No. 17",
+      "date": "September 2013",
+      "url": "https://www.loc.gov/marc/up17community/ciapndxf.html"
+    },
+    "18": {
+      "label": "Update No. 18",
+      "date": "April 2014",
+      "url": "https://www.loc.gov/marc/up18community/ciapndxf.html"
+    },
+    "19": {
+      "label": "Update No. 19",
+      "date": "October 2014",
+      "url": "https://www.loc.gov/marc/up19community/ciapndxf.html"
+    },
+    "20": {
+      "label": "Update No. 20",
+      "date": "April 2015",
+      "url": "https://www.loc.gov/marc/up20community/ciapndxf.html"
+    },
+    "21": {
+      "label": "Update No. 21",
+      "date": "September 2015",
+      "url": "https://www.loc.gov/marc/up21community/ciapndxf.html"
+    },
+    "22": {
+      "label": "Update No. 22",
+      "date": "April 2016",
+      "url": "https://www.loc.gov/marc/up22community/ciapndxf.html"
+    },
+    "23": {
+      "label": "Update No. 23",
+      "date": "November 2016",
+      "url": "https://www.loc.gov/marc/up23community/ciapndxf.html"
+    },
+    "24": {
+      "label": "Update No. 24",
+      "date": "May 2017",
+      "url": "https://www.loc.gov/marc/up24community/ciapndxf.html"
+    },
+    "25": {
+      "label": "Update No. 25",
+      "date": "December 2017",
+      "url": "https://www.loc.gov/marc/up25community/ciapndxf.html"
+    },
+    "26": {
+      "label": "Update No. 26",
+      "date": "April 2018",
+      "url": "https://www.loc.gov/marc/up26community/ciapndxf.html"
+    },
+    "27": {
+      "label": "Update No. 27",
+      "date": "November 2018",
+      "url": "https://www.loc.gov/marc/up27community/ciapndxf.html"
+    },
+    "28": {
+      "label": "Update No. 28",
+      "date": "May 2019",
+      "url": "https://www.loc.gov/marc/up28community/ciapndxf.html"
+    },
+    "29": {
+      "label": "Update No. 29",
+      "date": "November 2019",
+      "url": "https://www.loc.gov/marc/up29community/ciapndxf.html"
+    },
+    "30": {
+      "label": "Update No. 30",
+      "date": "May 2020",
+      "url": "https://www.loc.gov/marc/up30community/ciapndxf.html"
+    },
+    "31": {
+      "label": "Update No. 31",
+      "date": "December 2020",
+      "url": "https://www.loc.gov/marc/up31community/ciapndxf.html"
+    },
+    "32": {
+      "label": "Update No. 32",
+      "date": "June 2021",
+      "url": "https://www.loc.gov/marc/up32community/ciapndxf.html"
+    },
+    "33": {
+      "label": "Update No. 33",
+      "date": "November 2021",
+      "url": "https://www.loc.gov/marc/up33community/ciapndxf.html"
+    },
+    "34": {
+      "label": "Update No. 34",
+      "date": "July 2022",
+      "url": "https://www.loc.gov/marc/up34community/ciapndxf.html"
+    },
+    "35": {
+      "label": "Update No. 35",
+      "date": "December 2022",
+      "url": "https://www.loc.gov/marc/up35community/ciapndxf.html"
+    },
+    "36": {
+      "label": "Update No. 36",
+      "date": "June 2023",
+      "url": "https://www.loc.gov/marc/up36community/ciapndxf.html"
+    },
+    "37": {
+      "label": "Update No. 37",
+      "date": "December 2023",
+      "url": "https://www.loc.gov/marc/up37community/ciapndxf.html"
+    },
+    "38": {
+      "label": "Update No. 38",
+      "date": "June 2024",
+      "url": "https://www.loc.gov/marc/up38community/ciapndxf.html"
+    },
+    "39": {
+      "label": "Update No. 39",
+      "date": "December 2024",
+      "url": "https://www.loc.gov/marc/up39community/ciapndxf.html"
+    },
+    "40": {
+      "label": "Update No. 40",
+      "date": "June 2025",
+      "url": "https://www.loc.gov/marc/up40community/ciapndxf.html"
+    },
+    "41": {
+      "label": "Update No. 41",
+      "date": "December 2025",
+      "url": "https://www.loc.gov/marc/up41community/ciapndxf.html"
+    },
+    "42": {
+      "label": "Update No. 42",
+      "date": "May 2026",
+      "url": "https://www.loc.gov/marc/community/ciapndxf.html"
+    }
+  }
+}

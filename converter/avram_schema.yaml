@@ -1,0 +1,334 @@
+---
+title: Avram Schema Format
+description: JSON Schema of Avram Schema Format to validata Avram Schemas
+type: object
+additionalProperties: false
+properties:
+  title:
+    type: string
+  description:
+    type: string
+  url:
+    $ref: '#/definitions/url'
+  uri:
+    type: string
+    format: uri
+  profile:
+    type: string
+    format: uri
+    $comment: "Deprecated, use uri instead!"
+  family:
+    $ref: '#/definitions/non-empty-string'
+  $schema:
+    type: string
+    format: uri
+  created:
+    $ref: '#/definitions/timestamp'
+  modified:
+    $ref: '#/definitions/timestamp'
+  fields:
+    $ref: '#/definitions/field-schedule'
+  records:
+    $ref: '#/definitions/non-negative-integer'
+  language:
+    type: string
+    pattern: '^[a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*$'
+  codelists:
+    type: object
+    additionalProperties: false
+    patternProperties:
+      "^.+$":
+        type: object
+        additionalProperties: false
+        properties:
+          codes:
+            $ref: '#/definitions/explicitcodelist' 
+          title:
+            type: string
+          description:
+            type: string
+          created:
+            $ref: '#/definitions/timestamp'
+          modified:
+            $ref: '#/definitions/timestamp'
+          url:
+            $ref: '#/definitions/url'
+        required:
+        - codes
+  rules:
+    $ref: '#/definitions/rules'
+required:
+  - fields
+definitions:
+  non-empty-string:
+    type: string
+    minLength: 1
+  url:
+    type: string
+    format: uri
+    pattern: '^https?://'
+  timestamp:
+    type: string
+  non-negative-integer:
+    type: integer
+    minimum: 0
+  category:
+    type: array
+    items:
+      type: string
+  field-schedule:
+    type: object
+    additionalProperties: false
+    patternProperties:
+      '^.+':
+        type: object
+        additionalProperties: false
+        properties:
+          tag:
+            $ref: '#/definitions/non-empty-string'
+          label:
+            type: string
+          occurrence:
+            type: string
+            pattern: '^[0-9][0-9](-[0-9][0-9])?$'
+          counter:
+            type: string
+            pattern: '^[0-9]+(-[0-9]+)?$'
+          description:
+            type: string
+          examples:
+            type: array
+            items:
+              type: string
+          repeatable:
+            type: boolean
+          required:
+            type: boolean
+          deprecated:
+            type: boolean
+          pattern:
+            $ref: '#/definitions/regex'
+          groups:
+            $ref: '#/definitions/groups'
+          codes:
+            $ref: '#/definitions/codelist'
+          positions:
+            $ref: '#/definitions/positions'
+          url:
+            $ref: '#/definitions/url'
+          indicator1:
+            $ref: '#/definitions/indicator'
+          indicator2:
+            $ref: '#/definitions/indicator'
+          pica3:
+            type: string
+          subfields:
+            $ref: '#/definitions/subfield-schedule'
+          created:
+            $ref: '#/definitions/timestamp'
+          modified:
+            $ref: '#/definitions/timestamp'
+          total:
+            $ref: '#/definitions/non-negative-integer'
+          records:
+            $ref: '#/definitions/non-negative-integer'
+          rules:
+            $ref: '#/definitions/rules'
+          types:
+            type: object
+            patternProperties:
+              '^.+':
+                $ref: '#/definitions/typed-field-definition'
+          categories:
+            $ref: '#/definitions/category'
+        patternProperties:
+          '^_.*': {}
+  regex:
+    $ref: '#/definitions/non-empty-string'
+  typed-field-definition:
+    type: object
+    additionalProperties: false
+    properties:
+      label:
+        type: string
+      description:
+        type: string
+      pattern:
+        $ref: '#/definitions/regex'
+      groups:
+        $ref: '#/definitions/groups'
+      codes:
+        $ref: '#/definitions/codelist'
+      positions:
+        $ref: '#/definitions/positions'
+      url:
+        $ref: '#/definitions/url'
+  positions:
+    type: object
+    additionalProperties: false
+    patternProperties:
+      '^[0-9]+(-[0-9]+)?$':
+        type: object
+        additionalProperties: false
+        patternProperties:
+          '^_.*$': {}
+        properties:
+          label:
+            type: string
+          description:
+            type: string
+          url:
+            $ref: '#/definitions/url'
+          codes:
+            $ref: '#/definitions/codelist'
+          flags:
+            $ref: '#/definitions/codelist'
+          pattern:
+            $ref: '#/definitions/regex'
+          groups:
+            $ref: '#/definitions/groups'
+          start:
+            $ref: '#/definitions/non-negative-integer'
+          end:
+            $ref: '#/definitions/non-negative-integer'
+  field-types:
+    oneOf:
+      - type: object
+        additionalProperties: false
+        patternProperties:
+          '^.*':
+            type: object
+            additionalProperties: false
+            properties:
+              positions:
+                $ref: '#/definitions/positions'
+            required:
+             - positions
+      - type: object
+        additionalProperties: false
+        patternProperties:
+          '^.*':
+            type: object
+            additionalProperties: false
+            properties:
+              subfields:
+                $ref: '#/definitions/subfield-schedule'
+            required:
+             - subfields
+  subfield-schedule:
+    type: object
+    additionalProperties: false
+    patternProperties:
+      '^.*':
+        type: object
+        additionalProperties: false
+        properties:
+          code:
+            type: string
+          label:
+            type: string
+          repeatable:
+            type: boolean
+          required:
+            type: boolean
+          pattern:
+            $ref: '#/definitions/regex'
+          groups:
+            $ref: '#/definitions/groups'
+          positions:
+            $ref: '#/definitions/positions'
+          codes:
+            $ref: '#/definitions/codelist'
+          rules:
+            $ref: '#/definitions/rules'
+          url:
+            $ref: '#/definitions/url'
+          description:
+            type: string
+          examples: # TODO: not included in spec?!
+            type: array
+            items:
+              type: string
+          pica3:
+            type: string
+          created:
+            $ref: '#/definitions/timestamp'
+          modified:
+            $ref: '#/definitions/timestamp'
+          deprecated:
+            type: boolean
+          total:
+            $ref: '#/definitions/non-negative-integer'
+          records:
+            $ref: '#/definitions/non-negative-integer'
+          categories:
+            $ref: '#/definitions/category'
+        patternProperties:
+          '^_.*': {}
+  indicator:
+    oneOf:
+      - type: 'null'
+      - type: object
+        additionalProperties: false
+        properties:
+          label:
+            type: string
+          description:
+            type: string
+          url:
+            $ref: '#/definitions/url'
+          codes:
+            $ref: '#/definitions/codelist'
+          pattern:
+            $ref: '#/definitions/regex'
+          groups:
+            $ref: '#/definitions/groups'
+  groups:
+    type: object
+    patternProperties:  
+      '^[1-9][0-9]*$':
+        type: object
+        additionalProperties: false
+        properties:
+          label:
+            type: string
+          description:
+            type: string
+          url:
+            $ref: '#/definitions/url'
+  codelist:
+    oneOf:
+      - $ref: '#/definitions/non-empty-string'
+      - $ref: '#/definitions/explicitcodelist'
+  explicitcodelist:
+    type: object
+    additionalProperties: false
+    patternProperties:
+      '^.+':
+        oneOf:
+          - type: object
+            additionalProperties: false
+            properties:
+              code:
+                type: string
+              label:
+                type: string
+              description:
+                type: string
+              created:
+                $ref: '#/definitions/timestamp'
+              modified:
+                $ref: '#/definitions/timestamp'
+              deprecated:
+                type: boolean
+              url:
+                $ref: '#/definitions/url'
+          - type: string
+  rules:
+    type: array
+    items:
+      oneOf:
+      - type: string
+        pattern: '^[^<>"{}|^`\\]+$'
+      - type: object
+$schema: http://json-schema.org/draft-06/schema#

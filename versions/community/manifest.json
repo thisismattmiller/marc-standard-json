@@ -1,0 +1,156 @@
+[
+  {
+    "id": "base",
+    "label": "Base",
+    "file": "update_00_base.avram.json",
+    "fields": 76,
+    "modified": "2004-10"
+  },
+  {
+    "id": "7",
+    "label": "Update 7",
+    "file": "update_07.avram.json",
+    "fields": 76,
+    "modified": "2006-10"
+  },
+  {
+    "id": "8",
+    "label": "Update 8",
+    "file": "update_08.avram.json",
+    "fields": 76,
+    "modified": "2007-10"
+  },
+  {
+    "id": "9",
+    "label": "Update 9",
+    "file": "update_09.avram.json",
+    "fields": 76,
+    "modified": "2008-10"
+  },
+  {
+    "id": "12",
+    "label": "Update 12",
+    "file": "update_12.avram.json",
+    "fields": 76,
+    "modified": "2008-10"
+  },
+  {
+    "id": "13",
+    "label": "Update 13",
+    "file": "update_13.avram.json",
+    "fields": 76,
+    "modified": "2011-09"
+  },
+  {
+    "id": "15",
+    "label": "Update 15",
+    "file": "update_15.avram.json",
+    "fields": 77,
+    "modified": "2012-09"
+  },
+  {
+    "id": "18",
+    "label": "Update 18",
+    "file": "update_18.avram.json",
+    "fields": 77,
+    "modified": "2014-04"
+  },
+  {
+    "id": "19",
+    "label": "Update 19",
+    "file": "update_19.avram.json",
+    "fields": 77,
+    "modified": "2014-10"
+  },
+  {
+    "id": "23",
+    "label": "Update 23",
+    "file": "update_23.avram.json",
+    "fields": 77,
+    "modified": "2014-10"
+  },
+  {
+    "id": "25",
+    "label": "Update 25",
+    "file": "update_25.avram.json",
+    "fields": 77,
+    "modified": "2017-12"
+  },
+  {
+    "id": "27",
+    "label": "Update 27",
+    "file": "update_27.avram.json",
+    "fields": 77,
+    "modified": "2017-12"
+  },
+  {
+    "id": "28",
+    "label": "Update 28",
+    "file": "update_28.avram.json",
+    "fields": 77,
+    "modified": "2019-07"
+  },
+  {
+    "id": "30",
+    "label": "Update 30",
+    "file": "update_30.avram.json",
+    "fields": 77,
+    "modified": "2020-05"
+  },
+  {
+    "id": "31",
+    "label": "Update 31",
+    "file": "update_31.avram.json",
+    "fields": 77,
+    "modified": "2020-12"
+  },
+  {
+    "id": "32",
+    "label": "Update 32",
+    "file": "update_32.avram.json",
+    "fields": 77,
+    "modified": "2021-06"
+  },
+  {
+    "id": "34",
+    "label": "Update 34",
+    "file": "update_34.avram.json",
+    "fields": 77,
+    "modified": "2022-07"
+  },
+  {
+    "id": "35",
+    "label": "Update 35",
+    "file": "update_35.avram.json",
+    "fields": 77,
+    "modified": "2022-12"
+  },
+  {
+    "id": "36",
+    "label": "Update 36",
+    "file": "update_36.avram.json",
+    "fields": 78,
+    "modified": "2023-06"
+  },
+  {
+    "id": "37",
+    "label": "Update 37",
+    "file": "update_37.avram.json",
+    "fields": 78,
+    "modified": "2023-06"
+  },
+  {
+    "id": "38",
+    "label": "Update 38",
+    "file": "update_38.avram.json",
+    "fields": 78,
+    "modified": "2024-06"
+  },
+  {
+    "id": "40",
+    "label": "Update 40",
+    "file": "update_40.avram.json",
+    "fields": 78,
+    "modified": "2025-06"
+  }
+]
