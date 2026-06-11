@@ -257,6 +257,16 @@ def test_shared_group_subfields(bib):
         assert hold[t].get("subfields"), f"holdings {t} has no subfields"
 
 
+def test_diff_hunks_carry_json_path_context():
+    from marc_avram.diff import _unified
+    old = {"tag": "100", "subfields": {"7": {"label": "Data provenance",
+                                             "description": "old text"}}}
+    new = {"tag": "100", "subfields": {"7": {"label": "Data provenance",
+                                             "description": "new text"}}}
+    hunks = [t for m, t in _unified(old, new) if m == "@"]
+    assert hunks and hunks[0].endswith("subfields › $7")
+
+
 def test_updates_overview_parses():
     from marc_avram.updates import parse_overview
     src = next((ROOT / "MARC_HTML").glob("MARC Format Documentation Overview*"))

@@ -106,6 +106,7 @@ header h1 .v{color:var(--faint);font-weight:400;margin-left:6px}
 .line.add{background:var(--add-line)} .line.add .gut{color:var(--add-fg)}
 .line.del{background:var(--del-line)} .line.del .gut{color:var(--del-fg)}
 .line.hunk{background:var(--hunk-bg);color:var(--hunk-fg)}
+.hunkpath{color:var(--text);font-weight:650}
 .line.ctx{color:var(--muted)}
 .line .txt{flex:1}
 .empty{padding:80px 20px;text-align:center;color:var(--faint)}
@@ -314,7 +315,14 @@ function buildDiff(f){
     const cls=m==="+"?"add":m==="-"?"del":m==="@"?"hunk":"ctx";
     const line=el("div","line "+cls);
     line.appendChild(el("span","gut",m==="@"?"":m===" "?"":m));
-    line.appendChild(el("span","txt",t));
+    const pm=m==="@" ? t.match(/^(@@ .*? @@)( .+)$/) : null;
+    if(pm){                       // highlight the JSON-path hunk context
+      const txt=el("span","txt",pm[1]);
+      txt.appendChild(el("span","hunkpath",pm[2]));
+      line.appendChild(txt);
+    }else{
+      line.appendChild(el("span","txt",t));
+    }
     lines.appendChild(line);
   });
   diff.appendChild(lines);
